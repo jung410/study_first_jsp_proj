@@ -1,0 +1,483 @@
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,
+textarea,th,ul,a {
+    color: #222;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Do Hyeon', sans-serif;
+    width: 978px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+table {
+    font-family: 'dotum';
+    font-size: 12px;
+}
+#slidemenu a{
+    font-family: 'dotum';
+    font-size: 12px;
+    font-weight: 600;
+}
+/* fast_search의 input placeholder 가운데 정렬하기 */
+.fast_search input::placeholder{
+    font-size: 11px;
+    text-align: center;
+}
+/* ID 입력 및 비밀번호 입력의 placeholder 크기 조절 */
+.header_top_right input::placeholder{
+    font-size: 11px;
+}
+
+body .ui-dialog .ui-dialog-buttonpane button{
+    padding-bottom: 23px;
+    margin-right: 100px;
+    background: #222;
+    color: white;
+}
+.ui-draggable .ui-dialog-titlebar{
+    display: none;
+}
+body .ui-dialog .ui-dialog-content{
+    margin-top: 10px;
+    padding-left: 22px;
+    font-weight: 600;
+    font-size: 22px;
+}
+/* wrapper */
+.mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #0000008f;
+    display: none; 
+}
+#layer_popup_update{
+    width: 400px;
+    height: 150px;
+    background: #eee;
+    position: absolute;
+    top: 270px;
+    left: 300px;
+    z-index:1000;
+    display: none;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#layer_popup_update h2{text-align: center;}
+#layer_popup_update h2:first-child{margin-top: 20px;}
+#layer_popup_update button{
+    margin-left: 170px;
+    margin-top: 20px;
+    width: 60px;
+    height: 26px;
+    color: #eee;
+    background: rgb(95, 95, 95);
+    font-family: 'Do Hyeon';
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*        =========================== header 영역 ===========================*/
+/*        header 영역 margin */
+#header {
+    margin-top: 10px;
+}
+
+/*        좌측으로 float 시킴 */
+.logo img {
+    float: left;
+    margin-top: 5px;
+}
+
+/*      .header_top_right의 ul들을 우측으로 정렬  */
+.header_top_right ul, .header_top_right div {
+    margin: 5px;
+    text-align: right;
+}
+/*      .header_top_right의 li들을 inline-block으로 display 변경  */
+.header_top_right li {
+    display: inline-block;
+}
+.header_top_right ul img {
+    position: relative;
+    top: 4px;
+}
+.header_top_right{
+    height: 66px;;
+}
+/*        button type들의 크기를 일정하게 조정 */
+[type="button"] {
+    width: 60px;
+    height: 17px;
+    font-weight: 700;
+    font-size: 10px;
+    border: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+}
+/*        간편로그인의 li의 배경색과 border 조정 */
+.header_top_right ul:nth-child(2) li:nth-child(3) {
+    background: white;
+    border: 0px;
+}
+/*        간편로그인의 input의 배경색과 글자색 변경 */
+.header_top_right ul:nth-child(2) li:nth-child(3) input {
+    background-color: rgb(18, 178, 18);
+    color: white;
+}
+.header_top_right ul:first-child li:nth-child(3) input{
+    padding: 2px;
+    width: 100px;
+    height: 15px;
+    border: 1px solid #222;
+}
+.header_top_right ul:nth-child(2) li:nth-child(2) input{
+    padding: 2px;
+    width: 100px;
+    height: 15px;
+    border: 1px solid #222;
+}
+/* ID저장 checkbox 위치 조절 */
+.header_top_right ul:nth-child(2) li:first-child {
+    
+}
+/* 로그인 후 뜨는 ul 제어 */
+.header_top_right ul:nth-child(3){
+    display: none;
+}
+/* XXX님 환영합니다. > 이름 빼고 연하게 */
+.header_top_right ul:last-child li:first-child p span{
+    font-weight: 600;
+}
+/*        =========================== nav 영역 ===========================*/
+/*        먼저 세로배치를 가로배치로 바꿈 */
+/*        ul 사이의 margin을 주자 */
+/*        알아보기 쉽게 일단 배경도 좀 주고 */
+nav > ul > li {
+    display: inline-block;
+    margin-right: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 12px 4px 12px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.19);
+}
+
+nav > ul > li a {
+    color: #eee;
+    width: 50px;
+    height: 20px;
+}
+
+nav > ul:first-child > :first-child a {
+    color: #222;
+    font-size: 19px;
+}
+
+nav > ul:first-child > :first-child {
+    background: #f8cedd;
+    border: 2px solid rgba(189, 2, 2, 0.863);
+}
+
+nav > ul:nth-child(2) > li {
+    background: #a9aee6;
+}
+
+nav > ul:nth-child(1) {
+    /* padding: 5px 1px 4px 10px; */
+    float: left; 
+    /* background-origin: padding-box; */
+/*    background: rgba(0, 0, 0, 0.06);*/
+}
+
+nav > ul:nth-child(1) > li:last-child {
+    margin-right: 10px;
+}
+
+nav > ul:nth-child(2) > li:nth-child(2) {
+    margin-right: 10px;
+    position: relative;
+}
+
+nav > ul:nth-child(2) {
+    padding: 5px 0px 4px 10px;
+    float: right;
+    background-origin: padding-box;
+/*    background: rgba(0, 0, 0, 0.06);*/
+}
+
+.submenu1 {
+    display: inline-block;
+    position: absolute;
+    margin-top: 3px;
+    padding-top: 16px;
+    display: none;
+}
+.submenu1 > li:first-child {
+    border-radius: 5px 0px 0px 5px;
+}
+.submenu1 > li:last-child {
+    margin-right: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+.submenu1 > li {
+    display: block;
+    float: left;
+    padding: 2px 20px;
+    background: rgba(4, 1, 56, 0.685);
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.background {
+    position: absolute;
+    width: 978px;
+    height: 17px;
+    background: rgba(0, 0, 0, 0.06);;
+    top: 92px;
+    border-radius: 5px;
+    z-index: -1;
+}
+.submenu2{
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    width: 187px;
+    margin-top: 3px;
+    padding-top: 16px;
+    display: none;
+}
+.submenu2 li{
+    display: block;
+    float: left;
+    padding: 2px 20px;
+    background: rgba(4, 1, 56, 0.685);
+    font-size: 14px;
+    font-weight: 600;
+}
+.submenu2 > li:first-child {
+    border-radius: 5px 0px 0px 5px;
+}
+.submenu2 > li:last-child {
+    margin-right: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+.fast_search {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.fast_search h4 {
+    float: left;
+    margin: 5px 10px 10px 105px;
+    color: #222;
+}
+.fast_search input:last-child {
+    display: block;
+    padding: 4px;
+    border: 2px solid #222;
+}
+.btn_search {
+    float: left;
+    background-image: url('../images/search.jpg');
+    background-repeat: no-repeat;
+    background-size: 23px;
+    width: 22px;
+    height: 22px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+
+/*        =========================== slide 영역 ===========================*/
+body {
+    position: relative;
+}
+#slidemenu{
+    text-align: center;
+    background: white;
+    position: absolute;
+    width: 110px;
+    top: 130px;
+    right: -110px;
+}
+#slidemenu div {
+    border-radius: 4px 4px 4px 4px;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 1px 0;
+}
+#slidemenu div:first-child {
+    background-color: rgba(110, 51, 191, 0.84);
+    font-size: 17px;
+}
+#slidemenu div:first-child p{
+    color: white;
+}
+/*        =========================== main 영역 ===========================*/
+#sidemenu{
+    float: left;
+    width : 130px;
+    height: 200px;
+    border-radius: 4px;
+    background: rgba(108, 108, 109, 0.664);
+}
+#sidemenu h2, #sidemenu h4{
+    color: #eee;
+    text-shadow: 5px 5px 5px black;
+    padding-left: 5px;
+}
+#sidemenu h2{
+    padding-top: 3px;
+}
+#sidemenu a{
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+}
+/* 구매 가능 게임 a태그 */
+#sidemenu a:nth-of-type(1){
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    background: rgb(243, 242, 242);
+}
+/* 마감 게임 보기 a태그 */
+#sidemenu a:nth-of-type(2){
+    text-align: center;
+    color: white;
+}
+/* 게임 일정 a태그 */
+#sidemenu a:nth-of-type(3){
+    text-align: center;
+    color: white;
+}
+
+/* 구매 가능 게임 detail 게시판 css 적용 */
+#container > div {
+    margin-bottom: 30px;
+    margin-left: 160px;
+    width: 800px; height: 400px;
+    padding-top: 40px;
+    border-top: 1px solid black;
+}
+#container > img{
+    width: 130px;
+    margin-left: 30px;
+}
+#container > div > table{
+    margin-top: 10px;
+}
+#container > div > table th{
+    background: rgb(241, 240, 240);
+}
+#container > h1 {
+    font-size: 40px;
+    display: inline-block;
+}
+#container > p{
+    display: inline-block;
+    
+}
+#container table{
+    border-collapse: collapse;
+    text-align: center;
+}
+#container div > table tr {
+    border-bottom: 1px solid black;
+}
+#container div > table{
+    width: 800px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+#container div > table tr a{
+    padding: 3px;
+    background: rgb(1, 1, 85);
+    color: white;
+}
+
+#container div button{
+    margin-left: 10px;
+    padding: 5px 7px;
+    border: none;
+    background: rgb(240, 239, 239);
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#container div button:nth-of-type(2){
+    background: rgb(198, 198, 252);
+}
+#container div button:first-of-type{
+    margin-left: 350px;
+}
+
+.win{color: blue;}
+.lose{color: red;}
+
+/*        =========================== footer 영역 ===========================*/
+#footer{
+    margin-top: 100px;
+}
+#footer > ul {
+    border-top: 1px solid #646464;
+    margin-bottom: 20px;
+}
+
+#footer ul li {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+#footer ul li a {
+    padding-right: 6px;
+    border-right: 1px solid black;
+    text-shadow: 2px 2px 6px gray;
+}
+
+#footer ul li:last-child a {
+    border: 0px;
+}
+
+#footer div img {
+    float: left;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+#footer > img {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#footer p {
+    font-size: 14px;
+    float: left;
+    display: block;
+    color: #222;
+}
+
+#footer p:nth-of-type(4) {
+    width: 100%;
+    clear: both;
+    display: inline-block;
+    border-top: 1px solid;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+#footer p:nth-of-type(1) {
+    margin-top: 15px;
+}
